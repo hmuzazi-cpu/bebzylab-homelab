@@ -3,6 +3,8 @@
 ## Overview
 A fully functional Windows Server 2022 Active Directory home lab built from scratch on macOS using UTM virtualisation. This project demonstrates practical IT infrastructure skills across domain configuration, identity and access management, Group Policy, and security monitoring.
 
+![Network Diagram](network-diagram.svg)
+
 **Environment:**
 - Host: iMac (macOS Sequoia) running UTM
 - Domain Controller: Windows Server 2022 Standard (Desktop Experience)
