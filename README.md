@@ -28,6 +28,26 @@ A fully functional Windows Server 2022 Active Directory home lab built from scra
 - DHCP scope configuration and authorisation in AD
 - Group Policy application and verification
 
+**Screenshots:**
+
+![Domain setup](domain.png)
+
+![DC identity verification](dc%20whoami.png)
+
+![DHCP scope overview](dhcp%20scope.png)
+
+![DHCP scope lower bound (50)](dhcp%20scope%2050.png)
+
+![DHCP scope upper bound (150)](dhcp%20scope%20150.png)
+
+![Ping DC from client](ping%20dc.png)
+
+![GPO applied](GPO%20applied.png)
+
+![gpupdate /force](gpupdate%20force.png)
+
+![gpresult verification](gpresult.png)
+
 ---
 
 ## Phase 2 — Identity & Access Management
@@ -50,6 +70,52 @@ A fully functional Windows Server 2022 Active Directory home lab built from scra
 - Account lockout policy configuration
 - Real-world helpdesk procedures
 
+**Screenshots:**
+
+*Organisational Units*
+
+![Creating an OU](creating%20ou.png)
+
+![IT OU](IT%20ou.png)
+
+![HR OU](hr%20ou.png)
+
+![Finance OU](finance%20ou.png)
+
+![Helpdesk OU](helpdesk%20ou.png)
+
+*User creation*
+
+![Creating a user](creating%20user.png)
+
+![Setting password during creation](creating%20password%20for%20user.png)
+
+![Finalising user creation](finilizing%20user%20creation.png)
+
+*Security groups*
+
+![Adding user to group](add%20user%20to%20group.png)
+
+![User added to group confirmation](added%20user%20to%20group.png)
+
+![Security group member](security%20group%20member.png)
+
+![HR group members confirmation](members%20of%20hr%20group%20confirmation.png)
+
+*Helpdesk tickets*
+
+![Account lockout policy applied](account%20lockout%20applied.png)
+
+![Account lockout due to failed password attempts](account%20lockout%20due%20to%20failed%20password%20attemps%20after%20account%20lockout%20applied.png)
+
+![Account locked due to GPO](account%20locked%20due%20to%20GPO.png)
+
+![User account locked](user%20account%20locked%20.png)
+
+![Account unlocked](account%20unlocked.png)
+
+![Password reset](password%20reset.png)
+
 ---
 
 ## Phase 3 — Security & Monitoring
@@ -69,6 +135,16 @@ A fully functional Windows Server 2022 Active Directory home lab built from scra
 - Security event log analysis (Event IDs 4625, 4740)
 - Identifying brute force patterns in logs
 - Windows Defender Firewall rule creation and management
+
+**Screenshots:**
+
+![Event ID 4625 — brute force failed logins](event%204625%20-%20brute%20force%20failed%20loginss.png)
+
+![Event ID 4740 — jsmith account lockout](event%204740%20-%20jsmith%20lockout.png)
+
+![Firewall rule blocking ICMP inbound](firewall%20blocking%20icmp%20inbound%20rule.png)
+
+![Ping blocked by firewall rule](firewall%20ping%20blocked.png)
 
 ---
 
