@@ -1,0 +1,352 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="kaliGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d0f2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="winGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1f3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#091628;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wazuhGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2e0d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#071a07;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a0d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111108;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="networkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1e2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#09141f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Arrow markers -->
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f85149"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f0883e"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#bc8cff"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="820" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="600" y="46" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="700" filter="url(#subtleGlow)">Attack and Detect Lab</text>
+  <text x="600" y="68" text-anchor="middle" fill="#8b949e" font-size="14">Home Lab Architecture · Kali Linux vs Windows 10 · Wazuh SIEM Detection</text>
+  <line x1="200" y1="78" x2="1000" y2="78" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NETWORK ZONE BACKGROUND -->
+  <!-- ══════════════════════════════════════════ -->
+  <rect x="30" y="90" width="1140" height="580" rx="12" fill="none" stroke="#21262d" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="48" y="111" fill="#484f58" font-size="11" font-weight="600" letter-spacing="2">UTM VIRTUAL NETWORK · 192.168.64.0/24</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- KALI LINUX — ATTACKER (Left) -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="240" width="220" height="260" rx="10" fill="url(#kaliGrad)" stroke="#f85149" stroke-width="1.5"/>
+  </g>
+  <!-- Kali header -->
+  <rect x="60" y="240" width="220" height="42" rx="10" fill="#f85149" opacity="0.15"/>
+  <rect x="60" y="262" width="220" height="20" fill="#f85149" opacity="0.15"/>
+  <!-- Kali logo dragon icon area -->
+  <circle cx="86" cy="261" r="12" fill="#f85149" opacity="0.2" filter="url(#glow)"/>
+  <text x="86" y="266" text-anchor="middle" fill="#f85149" font-size="14" filter="url(#glow)">☠</text>
+  <text x="168" y="258" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">kali-attacker</text>
+  <text x="168" y="274" text-anchor="middle" fill="#f85149" font-size="10.5" opacity="0.85">ATTACKER MACHINE</text>
+
+  <!-- Kali details -->
+  <text x="80" y="302" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">OS</text>
+  <text x="120" y="302" fill="#e6edf3" font-size="10.5">Kali Linux 2024</text>
+  <text x="80" y="320" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">IP</text>
+  <text x="120" y="320" fill="#79c0ff" font-size="10.5" font-weight="600">192.168.64.5</text>
+  <text x="80" y="338" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">ROLE</text>
+  <text x="120" y="338" fill="#e6edf3" font-size="10.5">Penetration Tester</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="350" x2="260" y2="350" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Tools label -->
+  <text x="170" y="368" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">ATTACK TOOLS</text>
+  <!-- Tool badges -->
+  <rect x="80" y="376" width="56" height="18" rx="4" fill="#f85149" opacity="0.18" stroke="#f85149" stroke-width="0.8"/>
+  <text x="108" y="389" text-anchor="middle" fill="#f85149" font-size="10" font-weight="600">Nmap 7.99</text>
+  <rect x="144" y="376" width="52" height="18" rx="4" fill="#f0883e" opacity="0.18" stroke="#f0883e" stroke-width="0.8"/>
+  <text x="170" y="389" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="600">Hydra 9.6</text>
+  <rect x="80" y="402" width="116" height="18" rx="4" fill="#bc8cff" opacity="0.18" stroke="#bc8cff" stroke-width="0.8"/>
+  <text x="138" y="415" text-anchor="middle" fill="#bc8cff" font-size="10" font-weight="600">Metasploit 6.4</text>
+
+  <!-- Status indicator -->
+  <circle cx="80" cy="458" r="5" fill="#f85149" filter="url(#glow)"/>
+  <text x="92" y="462" fill="#8b949e" font-size="10">Actively Attacking</text>
+  <rect x="60" y="470" width="220" height="30" rx="0" fill="none"/>
+  <rect x="60" y="472" width="220" height="28" rx="0" fill="#f85149" opacity="0.04"/>
+  <rect x="60" y="472" width="220" height="28" rx="0" fill="none" stroke="#f85149" stroke-width="0" />
+  <rect x="60" y="470" width="220" height="1" fill="#f85149" opacity="0.3"/>
+  <text x="170" y="490" text-anchor="middle" fill="#f85149" font-size="9.5" opacity="0.7">MITRE ATT&amp;CK: T1046 · T1110 · T1569</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- WINDOWS 10 — TARGET (Center) -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="200" width="260" height="320" rx="10" fill="url(#winGrad)" stroke="#58a6ff" stroke-width="1.5"/>
+  </g>
+  <!-- Win10 header -->
+  <rect x="470" y="200" width="260" height="42" rx="10" fill="#58a6ff" opacity="0.12"/>
+  <rect x="470" y="222" width="260" height="20" fill="#58a6ff" opacity="0.12"/>
+  <!-- Windows logo -->
+  <rect x="492" y="249" width="7" height="7" fill="#00adef" opacity="0.9"/>
+  <rect x="501" y="249" width="7" height="7" fill="#00adef" opacity="0.9"/>
+  <rect x="492" y="258" width="7" height="7" fill="#00adef" opacity="0.9"/>
+  <rect x="501" y="258" width="7" height="7" fill="#00adef" opacity="0.9"/>
+  <text x="600" y="218" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="700">bebzylab-win10</text>
+  <text x="600" y="234" text-anchor="middle" fill="#58a6ff" font-size="10.5" opacity="0.85">TARGET ENDPOINT</text>
+
+  <!-- Win10 details -->
+  <text x="490" y="282" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">OS</text>
+  <text x="530" y="282" fill="#e6edf3" font-size="10.5">Windows 10 Pro</text>
+  <text x="490" y="300" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">IP</text>
+  <text x="530" y="300" fill="#79c0ff" font-size="10.5" font-weight="600">192.168.64.20</text>
+  <text x="490" y="318" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">PORT</text>
+  <text x="530" y="318" fill="#f0883e" font-size="10.5">3389 (RDP) · Open</text>
+  <text x="490" y="336" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">DOMAIN</text>
+  <text x="530" y="336" fill="#e6edf3" font-size="10.5">bebzylab.local</text>
+
+  <line x1="490" y1="348" x2="710" y2="348" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Windows Defender badge -->
+  <rect x="490" y="357" width="220" height="54" rx="6" fill="#0f2d0f" stroke="#3fb950" stroke-width="1"/>
+  <circle cx="508" cy="372" r="7" fill="#3fb950" opacity="0.2"/>
+  <text x="508" y="376" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">✓</text>
+  <text x="524" y="369" fill="#3fb950" font-size="10" font-weight="700">Windows Defender</text>
+  <text x="524" y="383" fill="#8b949e" font-size="9.5">Real-time protection: ENABLED</text>
+  <text x="490" y="403" fill="#8b949e" font-size="9.5">Blocked Metasploit payload before execution</text>
+
+  <!-- Wazuh agent badge -->
+  <rect x="490" y="418" width="220" height="28" rx="6" fill="#0d2e1a" stroke="#56d364" stroke-width="1"/>
+  <circle cx="508" cy="432" r="5" fill="#56d364" filter="url(#subtleGlow)"/>
+  <text x="524" y="436" fill="#56d364" font-size="10" font-weight="700">Wazuh Agent · Active</text>
+  <text x="650" y="436" fill="#8b949e" font-size="9">→ 192.168.64.4</text>
+
+  <!-- Status -->
+  <rect x="470" y="452" width="260" height="1" fill="#58a6ff" opacity="0.3"/>
+  <text x="600" y="470" text-anchor="middle" fill="#58a6ff" font-size="9.5" opacity="0.7">Under active attack — all events logged to Wazuh</text>
+  <text x="600" y="484" text-anchor="middle" fill="#8b949e" font-size="9" opacity="0.6">Account locked · RDP targeted · SMB probed</text>
+  <text x="600" y="498" text-anchor="middle" fill="#8b949e" font-size="9" opacity="0.6">T1078 · T1110 · T1531 · T1098 · T1569</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- WAZUH SERVER (Right) -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="900" y="200" width="230" height="300" rx="10" fill="url(#wazuhGrad)" stroke="#3fb950" stroke-width="1.5"/>
+  </g>
+  <!-- Wazuh header -->
+  <rect x="900" y="200" width="230" height="42" rx="10" fill="#3fb950" opacity="0.12"/>
+  <rect x="900" y="222" width="230" height="20" fill="#3fb950" opacity="0.12"/>
+  <circle cx="920" cy="261" r="10" fill="#3fb950" opacity="0.2"/>
+  <text x="920" y="265" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="700">W</text>
+  <text x="1015" y="218" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">wazuh-server</text>
+  <text x="1015" y="234" text-anchor="middle" fill="#3fb950" font-size="10.5" opacity="0.85">SIEM / DETECTION</text>
+
+  <!-- Wazuh details -->
+  <text x="920" y="282" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">OS</text>
+  <text x="958" y="282" fill="#e6edf3" font-size="10.5">Ubuntu 22.04 LTS</text>
+  <text x="920" y="300" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">IP</text>
+  <text x="958" y="300" fill="#79c0ff" font-size="10.5" font-weight="600">192.168.64.4</text>
+  <text x="920" y="318" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">VERSION</text>
+  <text x="958" y="318" fill="#e6edf3" font-size="10.5">Wazuh 4.7.5</text>
+
+  <line x1="920" y1="330" x2="1110" y2="330" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Alerts detected -->
+  <text x="1015" y="348" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">ALERTS DETECTED</text>
+  <!-- Rule badges -->
+  <rect x="920" y="356" width="80" height="18" rx="4" fill="#f0883e" opacity="0.18" stroke="#f0883e" stroke-width="0.8"/>
+  <text x="960" y="369" text-anchor="middle" fill="#f0883e" font-size="9.5" font-weight="600">Rule 60122 · L5</text>
+  <rect x="1010" y="356" width="80" height="18" rx="4" fill="#f85149" opacity="0.18" stroke="#f85149" stroke-width="0.8"/>
+  <text x="1050" y="369" text-anchor="middle" fill="#f85149" font-size="9.5" font-weight="600">Rule 60204 · L10</text>
+  <rect x="920" y="382" width="80" height="18" rx="4" fill="#d29922" opacity="0.18" stroke="#d29922" stroke-width="0.8"/>
+  <text x="960" y="395" text-anchor="middle" fill="#d29922" font-size="9.5" font-weight="600">Rule 60115 · L9</text>
+  <rect x="1010" y="382" width="80" height="18" rx="4" fill="#bc8cff" opacity="0.18" stroke="#bc8cff" stroke-width="0.8"/>
+  <text x="1050" y="395" text-anchor="middle" fill="#bc8cff" font-size="9.5" font-weight="600">Rule 60109 · L8</text>
+  <rect x="965" y="408" width="80" height="18" rx="4" fill="#58a6ff" opacity="0.18" stroke="#58a6ff" stroke-width="0.8"/>
+  <text x="1005" y="421" text-anchor="middle" fill="#58a6ff" font-size="9.5" font-weight="600">Rule 60110 · L8</text>
+
+  <line x1="920" y1="434" x2="1110" y2="434" stroke="#30363d" stroke-width="1"/>
+  <text x="1015" y="450" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">FRAMEWORK</text>
+  <rect x="920" y="456" width="170" height="22" rx="5" fill="#1a1a2e" stroke="#58a6ff" stroke-width="0.8"/>
+  <text x="1005" y="472" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="600">MITRE ATT&amp;CK Dashboard</text>
+
+  <!-- Status -->
+  <circle cx="920" cy="488" r="5" fill="#3fb950" filter="url(#subtleGlow)"/>
+  <text x="932" y="492" fill="#3fb950" font-size="10">6 tactics detected in real time</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- WINDOWS SERVER DC (Bottom Center) -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="580" width="360" height="110" rx="10" fill="url(#dcGrad)" stroke="#d29922" stroke-width="1.5"/>
+  </g>
+  <rect x="420" y="580" width="360" height="34" rx="10" fill="#d29922" opacity="0.1"/>
+  <rect x="420" y="600" width="360" height="14" fill="#d29922" opacity="0.1"/>
+  <!-- DC header -->
+  <rect x="436" y="589" width="14" height="7" rx="1" fill="#d29922" opacity="0.8"/>
+  <rect x="436" y="598" width="14" height="7" rx="1" fill="#d29922" opacity="0.8"/>
+  <text x="600" y="599" text-anchor="middle" fill="#d29922" font-size="12" font-weight="700">bebzylab-dc · Active Directory Domain Controller</text>
+  <text x="600" y="613" text-anchor="middle" fill="#d29922" font-size="9.5" opacity="0.75">DOMAIN SERVICES · SUPPORTING INFRASTRUCTURE</text>
+
+  <text x="444" y="636" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">OS</text>
+  <text x="480" y="636" fill="#e6edf3" font-size="10.5">Windows Server 2022</text>
+  <text x="615" y="636" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">IP</text>
+  <text x="645" y="636" fill="#79c0ff" font-size="10.5" font-weight="600">192.168.64.10</text>
+  <text x="444" y="655" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">DOMAIN</text>
+  <text x="490" y="655" fill="#e6edf3" font-size="10.5">bebzylab.local</text>
+  <text x="615" y="655" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">ROLE</text>
+  <text x="645" y="655" fill="#e6edf3" font-size="10.5">AD DS · DHCP · DNS</text>
+  <text x="600" y="678" text-anchor="middle" fill="#8b949e" font-size="9">Account lockout policy enforced — triggered by Hydra brute force</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ATTACK ARROWS: Kali → Win10 -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <!-- Arrow 1: Nmap scan (top path) -->
+  <path d="M 280 295 C 360 270, 390 255, 470 255" stroke="#f85149" stroke-width="2" fill="none" marker-end="url(#arrowRed)" stroke-dasharray="0"/>
+  <!-- Nmap label bubble -->
+  <rect x="290" y="256" width="170" height="36" rx="6" fill="#1a0a0a" stroke="#f85149" stroke-width="1"/>
+  <text x="375" y="271" text-anchor="middle" fill="#f85149" font-size="10.5" font-weight="700">Nmap 7.99 · Port Scan</text>
+  <text x="375" y="284" text-anchor="middle" fill="#8b949e" font-size="9.5">T1046 · Network Service Discovery</text>
+
+  <!-- Arrow 2: Hydra brute force (middle path) -->
+  <path d="M 280 355 C 360 355, 390 355, 470 355" stroke="#f0883e" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <!-- Hydra label bubble -->
+  <rect x="290" y="335" width="170" height="36" rx="6" fill="#1a0e05" stroke="#f0883e" stroke-width="1"/>
+  <text x="375" y="350" text-anchor="middle" fill="#f0883e" font-size="10.5" font-weight="700">Hydra 9.6 · RDP Brute Force</text>
+  <text x="375" y="363" text-anchor="middle" fill="#8b949e" font-size="9.5">T1110 · T1078 · T1531</text>
+
+  <!-- Arrow 3: Metasploit (bottom path) -->
+  <path d="M 280 420 C 360 430, 390 420, 470 410" stroke="#bc8cff" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <!-- Metasploit label bubble -->
+  <rect x="290" y="415" width="170" height="36" rx="6" fill="#150d1a" stroke="#bc8cff" stroke-width="1"/>
+  <text x="375" y="430" text-anchor="middle" fill="#bc8cff" font-size="10.5" font-weight="700">Metasploit 6.4 · PSExec</text>
+  <text x="375" y="443" text-anchor="middle" fill="#8b949e" font-size="9.5">T1569 · T1098 · Blocked ✗</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- MONITORING ARROW: Win10 → Wazuh -->
+  <!-- ══════════════════════════════════════════ -->
+  <path d="M 730 360 C 800 360, 840 360, 900 360" stroke="#3fb950" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <!-- Monitoring label -->
+  <rect x="750" y="340" width="130" height="36" rx="6" fill="#071a07" stroke="#3fb950" stroke-width="1"/>
+  <text x="815" y="355" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Wazuh Agent Logs</text>
+  <text x="815" y="368" text-anchor="middle" fill="#8b949e" font-size="9">Events → SIEM · Real-time</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- DC CONNECTOR: Win10 ↔ DC (domain member) -->
+  <!-- ══════════════════════════════════════════ -->
+  <path d="M 600 520 L 600 580" stroke="#d29922" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowBlue)" opacity="0.6"/>
+  <rect x="528" y="534" width="145" height="16" rx="4" fill="#1a1500" stroke="#d29922" stroke-width="0.6" opacity="0.8"/>
+  <text x="600" y="546" text-anchor="middle" fill="#d29922" font-size="9" opacity="0.9">Domain Member · bebzylab.local</text>
+
+  <!-- Wazuh to DC connector -->
+  <path d="M 1015 500 C 1015 555, 800 600, 780 600" stroke="#3fb950" stroke-width="1.2" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="930" y="574" fill="#3fb950" font-size="9" opacity="0.6" text-anchor="middle">Wazuh Agent</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- LEGEND -->
+  <!-- ══════════════════════════════════════════ -->
+  <rect x="30" y="692" width="1140" height="112" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="600" y="712" text-anchor="middle" fill="#8b949e" font-size="11" font-weight="600" letter-spacing="2">MITRE ATT&amp;CK COVERAGE</text>
+
+  <!-- Tactic pills row 1 -->
+  <rect x="50" y="720" width="140" height="22" rx="5" fill="#f85149" opacity="0.15" stroke="#f85149" stroke-width="0.8"/>
+  <text x="120" y="735" text-anchor="middle" fill="#f85149" font-size="9.5" font-weight="600">Discovery · T1046</text>
+
+  <rect x="202" y="720" width="150" height="22" rx="5" fill="#f0883e" opacity="0.15" stroke="#f0883e" stroke-width="0.8"/>
+  <text x="277" y="735" text-anchor="middle" fill="#f0883e" font-size="9.5" font-weight="600">Credential Access · T1110</text>
+
+  <rect x="364" y="720" width="140" height="22" rx="5" fill="#f0883e" opacity="0.12" stroke="#f0883e" stroke-width="0.7"/>
+  <text x="434" y="735" text-anchor="middle" fill="#f0883e" font-size="9.5" font-weight="600">Initial Access · T1078</text>
+
+  <rect x="516" y="720" width="140" height="22" rx="5" fill="#f0883e" opacity="0.12" stroke="#d29922" stroke-width="0.7"/>
+  <text x="586" y="735" text-anchor="middle" fill="#d29922" font-size="9.5" font-weight="600">Impact · T1531</text>
+
+  <rect x="668" y="720" width="160" height="22" rx="5" fill="#bc8cff" opacity="0.12" stroke="#bc8cff" stroke-width="0.7"/>
+  <text x="748" y="735" text-anchor="middle" fill="#bc8cff" font-size="9.5" font-weight="600">Persistence · T1098</text>
+
+  <rect x="840" y="720" width="170" height="22" rx="5" fill="#58a6ff" opacity="0.12" stroke="#58a6ff" stroke-width="0.7"/>
+  <text x="925" y="735" text-anchor="middle" fill="#58a6ff" font-size="9.5" font-weight="600">Defense Evasion · T1562</text>
+
+  <rect x="1022" y="720" width="120" height="22" rx="5" fill="#bc8cff" opacity="0.12" stroke="#bc8cff" stroke-width="0.7"/>
+  <text x="1082" y="735" text-anchor="middle" fill="#bc8cff" font-size="9.5" font-weight="600">Execution · T1569</text>
+
+  <!-- Row 2: Legend line -->
+  <line x1="50" y1="754" x2="1150" y2="754" stroke="#30363d" stroke-width="0.8"/>
+
+  <!-- Legend items row 2 -->
+  <line x1="60" y1="771" x2="90" y2="771" stroke="#f85149" stroke-width="2"/>
+  <polygon points="88,768 96,771 88,774" fill="#f85149"/>
+  <text x="100" y="775" fill="#8b949e" font-size="10">Nmap Reconnaissance</text>
+
+  <line x1="250" y1="771" x2="280" y2="771" stroke="#f0883e" stroke-width="2"/>
+  <polygon points="278,768 286,771 278,774" fill="#f0883e"/>
+  <text x="290" y="775" fill="#8b949e" font-size="10">Hydra Brute Force (RDP)</text>
+
+  <line x1="460" y1="771" x2="490" y2="771" stroke="#bc8cff" stroke-width="2"/>
+  <polygon points="488,768 496,771 488,774" fill="#bc8cff"/>
+  <text x="500" y="775" fill="#8b949e" font-size="10">Metasploit Exploitation (Blocked)</text>
+
+  <line x1="700" y1="771" x2="730" y2="771" stroke="#3fb950" stroke-width="2"/>
+  <polygon points="728,768 736,771 728,774" fill="#3fb950"/>
+  <text x="740" y="775" fill="#8b949e" font-size="10">Wazuh Agent Telemetry</text>
+
+  <line x1="900" y1="771" x2="930" y2="771" stroke="#d29922" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="940" y="775" fill="#8b949e" font-size="10">Domain Membership</text>
+
+  <!-- Footer -->
+  <text x="600" y="795" text-anchor="middle" fill="#484f58" font-size="9.5">Attack and Detect Lab · bebzylab.local · github.com/hmuzazi-cpu/bebzylab-homelab</text>
+</svg>
