@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="'Segoe UI', Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#0f1117" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700">BebzyLab — Cisco Networking Lab (GNS3)</text>
+  <text x="450" y="58" text-anchor="middle" fill="#64748b" font-size="12">Three-Site Enterprise Topology · OSPF Area 0 · VLANs · ACL</text>
+
+  <!-- ─────────────── SITE BOXES ─────────────── -->
+
+  <!-- HQ box -->
+  <rect x="30" y="80" width="230" height="460" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="145" y="103" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">HQ</text>
+
+  <!-- Branch box -->
+  <rect x="335" y="80" width="230" height="460" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="450" y="103" text-anchor="middle" fill="#8b5cf6" font-size="13" font-weight="700">Branch</text>
+
+  <!-- Data Centre box -->
+  <rect x="640" y="80" width="230" height="460" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="755" y="103" text-anchor="middle" fill="#10b981" font-size="13" font-weight="700">Data Centre</text>
+
+  <!-- ─────────────── ROUTERS ─────────────── -->
+
+  <!-- R1 (HQ) at (145, 175) -->
+  <circle cx="145" cy="175" r="32" fill="#1e40af" stroke="#3b82f6" stroke-width="2"/>
+  <text x="145" y="170" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">R1</text>
+  <text x="145" y="186" text-anchor="middle" fill="#93c5fd" font-size="9">Cisco IOS 15.3</text>
+
+  <!-- R2 (Branch) at (450, 175) -->
+  <circle cx="450" cy="175" r="32" fill="#5b21b6" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="450" y="170" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">R2</text>
+  <text x="450" y="186" text-anchor="middle" fill="#c4b5fd" font-size="9">Cisco IOS 15.3</text>
+
+  <!-- R3 (DC) at (755, 175) -->
+  <circle cx="755" cy="175" r="32" fill="#065f46" stroke="#10b981" stroke-width="2"/>
+  <text x="755" y="170" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">R3</text>
+  <text x="755" y="186" text-anchor="middle" fill="#6ee7b7" font-size="9">Cisco IOS 15.3</text>
+
+  <!-- ─────────────── WAN SERIAL LINKS ─────────────── -->
+
+  <!-- R1 Se2/0 → R2 Se2/0 -->
+  <line x1="177" y1="163" x2="418" y2="163" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- arrowhead right -->
+  <polygon points="418,158 430,163 418,168" fill="#f59e0b"/>
+  <!-- arrowhead left -->
+  <polygon points="177,158 165,163 177,168" fill="#f59e0b"/>
+  <text x="297" y="152" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600">Serial WAN</text>
+  <text x="210" y="177" text-anchor="middle" fill="#fcd34d" font-size="9">Se2/0 10.0.0.1/30</text>
+  <text x="388" y="177" text-anchor="middle" fill="#fcd34d" font-size="9">Se2/0 10.0.0.2/30</text>
+
+  <!-- R1 Se3/0 → R3 Se2/0 -->
+  <line x1="177" y1="187" x2="723" y2="187" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,4"/>
+  <polygon points="723,182 735,187 723,192" fill="#f59e0b"/>
+  <polygon points="177,182 165,187 177,192" fill="#f59e0b"/>
+  <text x="450" y="205" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600">Serial WAN</text>
+  <text x="240" y="200" text-anchor="middle" fill="#fcd34d" font-size="9">Se3/0 10.0.1.1/30</text>
+  <text x="670" y="200" text-anchor="middle" fill="#fcd34d" font-size="9">Se2/0 10.0.1.2/30</text>
+
+  <!-- ─────────────── SWITCHES ─────────────── -->
+
+  <!-- SW1 (HQ) at (145, 335) -->
+  <rect x="105" y="310" width="80" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="145" y="330" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">SW1</text>
+  <text x="145" y="347" text-anchor="middle" fill="#93c5fd" font-size="9">Cisco IOS</text>
+  <text x="145" y="357" text-anchor="middle" fill="#64748b" font-size="8">VLAN 10, 20</text>
+
+  <!-- SW2 (Branch) at (450, 335) -->
+  <rect x="410" y="310" width="80" height="50" rx="6" fill="#3b1f6e" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="450" y="330" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">SW2</text>
+  <text x="450" y="347" text-anchor="middle" fill="#c4b5fd" font-size="9">Cisco IOS</text>
+  <text x="450" y="357" text-anchor="middle" fill="#64748b" font-size="8">VLAN 30</text>
+
+  <!-- SW3 (DC) at (755, 335) -->
+  <rect x="715" y="310" width="80" height="50" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="755" y="330" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">SW3</text>
+  <text x="755" y="347" text-anchor="middle" fill="#6ee7b7" font-size="9">Cisco IOS</text>
+  <text x="755" y="357" text-anchor="middle" fill="#64748b" font-size="8">VLAN 50</text>
+
+  <!-- R1 → SW1 trunk link -->
+  <line x1="145" y1="207" x2="145" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <text x="158" y="265" fill="#60a5fa" font-size="9">Trunk</text>
+  <text x="158" y="276" fill="#60a5fa" font-size="9">Fa0/0</text>
+
+  <!-- R2 → SW2 trunk link -->
+  <line x1="450" y1="207" x2="450" y2="310" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="463" y="265" fill="#a78bfa" font-size="9">Trunk</text>
+  <text x="463" y="276" fill="#a78bfa" font-size="9">Fa0/0</text>
+
+  <!-- R3 → SW3 trunk link -->
+  <line x1="755" y1="207" x2="755" y2="310" stroke="#10b981" stroke-width="2"/>
+  <text x="768" y="265" fill="#34d399" font-size="9">Trunk</text>
+  <text x="768" y="276" fill="#34d399" font-size="9">Fa0/0</text>
+
+  <!-- ─────────────── VLAN SEGMENTS ─────────────── -->
+
+  <!-- HQ VLAN 10 -->
+  <rect x="50" y="390" width="90" height="50" rx="5" fill="#172554" stroke="#2563eb" stroke-width="1"/>
+  <text x="95" y="409" text-anchor="middle" fill="#93c5fd" font-size="10" font-weight="700">VLAN 10</text>
+  <text x="95" y="422" text-anchor="middle" fill="#64748b" font-size="9">IT</text>
+  <text x="95" y="433" text-anchor="middle" fill="#60a5fa" font-size="9">192.168.10.0/24</text>
+
+  <!-- HQ VLAN 20 -->
+  <rect x="155" y="390" width="90" height="50" rx="5" fill="#172554" stroke="#2563eb" stroke-width="1"/>
+  <text x="200" y="409" text-anchor="middle" fill="#93c5fd" font-size="10" font-weight="700">VLAN 20</text>
+  <text x="200" y="422" text-anchor="middle" fill="#64748b" font-size="9">Admin</text>
+  <text x="200" y="433" text-anchor="middle" fill="#60a5fa" font-size="9">192.168.20.0/24</text>
+
+  <!-- SW1 → VLAN 10 -->
+  <line x1="110" y1="360" x2="95" y2="390" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- SW1 → VLAN 20 -->
+  <line x1="175" y1="360" x2="200" y2="390" stroke="#2563eb" stroke-width="1.5"/>
+
+  <!-- Branch VLAN 30 -->
+  <rect x="400" y="390" width="100" height="50" rx="5" fill="#2e1065" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="409" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700">VLAN 30</text>
+  <text x="450" y="422" text-anchor="middle" fill="#64748b" font-size="9">Staff</text>
+  <text x="450" y="433" text-anchor="middle" fill="#a78bfa" font-size="9">192.168.30.0/24</text>
+
+  <!-- SW2 → VLAN 30 -->
+  <line x1="450" y1="360" x2="450" y2="390" stroke="#7c3aed" stroke-width="1.5"/>
+
+  <!-- DC VLAN 50 -->
+  <rect x="705" y="390" width="100" height="50" rx="5" fill="#052e16" stroke="#059669" stroke-width="1"/>
+  <text x="755" y="409" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="700">VLAN 50</text>
+  <text x="755" y="422" text-anchor="middle" fill="#64748b" font-size="9">Servers</text>
+  <text x="755" y="433" text-anchor="middle" fill="#34d399" font-size="9">192.168.50.0/24</text>
+
+  <!-- SW3 → VLAN 50 -->
+  <line x1="755" y1="360" x2="755" y2="390" stroke="#059669" stroke-width="1.5"/>
+
+  <!-- ─────────────── OSPF LABEL ─────────────── -->
+  <rect x="350" y="112" width="100" height="26" rx="4" fill="#292524" stroke="#f59e0b" stroke-width="1"/>
+  <text x="400" y="129" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">OSPF Area 0</text>
+
+  <!-- ─────────────── ACL BLOCK ANNOTATION ─────────────── -->
+  <!-- Red dashed arrow from VLAN 30 toward VLAN 50, blocked -->
+  <line x1="505" y1="415" x2="695" y2="415" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="695,410 707,415 695,420" fill="#ef4444"/>
+  <!-- Block symbol (X) -->
+  <circle cx="620" cy="415" r="12" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="613" y1="408" x2="627" y2="422" stroke="#ef4444" stroke-width="2"/>
+  <line x1="627" y1="408" x2="613" y2="422" stroke="#ef4444" stroke-width="2"/>
+  <text x="620" y="440" text-anchor="middle" fill="#ef4444" font-size="9">ACL BLOCK</text>
+  <text x="620" y="451" text-anchor="middle" fill="#ef4444" font-size="8">Branch → DC</text>
+
+  <!-- HQ → DC permitted (green arrow, above) -->
+  <path d="M 145 142 Q 450 80 755 142" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,3" fill="none"/>
+  <polygon points="749,138 763,144 752,151" fill="#22c55e"/>
+  <text x="450" y="78" text-anchor="middle" fill="#22c55e" font-size="9">HQ ↔ DC  Permitted</text>
+
+  <!-- ─────────────── SUBINTERFACE LABELS ─────────────── -->
+
+  <!-- R1 subinterfaces -->
+  <text x="55" y="302" fill="#60a5fa" font-size="8">Fa0/0.10 — 192.168.10.1</text>
+  <text x="55" y="312" fill="#60a5fa" font-size="8">Fa0/0.20 — 192.168.20.1</text>
+
+  <!-- R2 subinterfaces -->
+  <text x="350" y="302" fill="#a78bfa" font-size="8">Fa0/0.30 — 192.168.30.1</text>
+
+  <!-- R3 subinterfaces -->
+  <text x="645" y="302" fill="#34d399" font-size="8">Fa0/0.50 — 192.168.50.1</text>
+
+  <!-- ─────────────── LEGEND ─────────────── -->
+  <rect x="50" y="470" width="800" height="120" rx="8" fill="#161b27" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="490" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="700">Legend</text>
+
+  <!-- Serial WAN -->
+  <line x1="80" y1="510" x2="130" y2="510" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="140" y="514" fill="#e2e8f0" font-size="10">Serial WAN Link (point-to-point)</text>
+
+  <!-- Trunk -->
+  <line x1="80" y1="530" x2="130" y2="530" stroke="#3b82f6" stroke-width="2"/>
+  <text x="140" y="534" fill="#e2e8f0" font-size="10">Ethernet Trunk (802.1Q)</text>
+
+  <!-- ACL block -->
+  <line x1="80" y1="550" x2="130" y2="550" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <circle cx="105" cy="550" r="7" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="99" y1="544" x2="111" y2="556" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="111" y1="544" x2="99" y2="556" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="140" y="554" fill="#e2e8f0" font-size="10">ACL — Blocked path (Branch → DC)</text>
+
+  <!-- Permitted -->
+  <line x1="80" y1="570" x2="130" y2="570" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="140" y="574" fill="#e2e8f0" font-size="10">Permitted path (HQ ↔ DC)</text>
+
+  <!-- OSPF note -->
+  <text x="500" y="514" fill="#fbbf24" font-size="10" font-weight="600">OSPF Area 0</text>
+  <text x="500" y="528" fill="#94a3b8" font-size="9">All routers participate · Hello interval 10s · Dead 40s</text>
+  <text x="500" y="542" fill="#94a3b8" font-size="9">Neighbour state: Full on all links</text>
+  <text x="500" y="556" fill="#94a3b8" font-size="9">Multicast: 224.0.0.5</text>
+  <text x="500" y="573" fill="#64748b" font-size="9">GNS3 2.2.49 · Cisco IOS 15.3(3)XB12 (c7200) · macOS Sequoia</text>
+
+</svg>
